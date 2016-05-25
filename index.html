@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Dashboards and Data Downloads for Wikimedia Projects</title>
-  <link rel="icon" href="./static/wikimedia_favicon.ico" type="image/x-icon"/>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" rel ="stylesheet"/>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js" defer></script>
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js" defer></script>
-<!-- Piwik , note piwik for this site is "8"-->
-<script type="text/javascript">
+  <link rel="icon" type="image/x-icon" href="./static/wikimedia_favicon.ico">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script defer src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+<!-- Piwik, note piwik ID for this site is "8"-->
+<script>
   var _paq = _paq || [];
   _paq.push(["setDomains", ["*.analytics.wikimedia.org"]]);
   _paq.push(['trackPageView']);
@@ -22,27 +22,21 @@
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//piwik.wikimedia.org/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="//piwik.wikimedia.org/piwik.php?idsite=8" style="border:0;" alt=""/></p></noscript>
 <!-- End Piwik Code -->
 
 </head>
 <body>
-
-  <div class="ui main text container" >
-
-    <div class="ui menu">
-      <a class="item" href="https://wikimediafoundation.org">
-
-﻿
-
- <img  class=" ui  image" alt="Wmf logo vert pms.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/75px-Wmf_logo_vert_pms.svg.png" width="75" height="60" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/113px-Wmf_logo_vert_pms.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/150px-Wmf_logo_vert_pms.svg.png 2x" data-file-width="360" data-file-height="288">
-
-     </a>
-     <div class="right menu">
+<div class="ui main text container">
+  <div class="ui menu">
+    <a class="item" href="https://wikimediafoundation.org">
+<img class="ui image" alt="Wmf logo vert pms.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/75px-Wmf_logo_vert_pms.svg.png" width="75" height="60" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/113px-Wmf_logo_vert_pms.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Wmf_logo_vert_pms.svg/150px-Wmf_logo_vert_pms.svg.png 2x" data-file-width="360" data-file-height="288">
+    </a>
+    <div class="right menu">
       <div class="ui simple dropdown item">
         <i class="dashboard icon"></i>Dashboards<i class="dropdown icon"></i>
         <div class="menu">
-          <div class="item"> <a href="dashboards/browsers"> Browser Statistics</a></div>
+          <div class="item"><a href="dashboards/browsers">Browser Statistics</a></div>
           <div class="item"><a href="dashboards/readers#projects=eswiki,itwiki,enwiki,jawiki,dewiki,ruwiki,frwiki/metrics=Pageviews">Readers: Pageviews and Unique Devices </a></div>
         </div>
       </div>
@@ -53,31 +47,28 @@
           <div class="item"><a href="https://dumps.wikimedia.org">https://dumps.wikimedia.org</a></div>
         </div>
       </div>
-      <a class="item" href="mailto:analytics@lists.wikimedia.org"  target="_blank">
+      <a class="item" href="mailto:analytics@lists.wikimedia.org" target="_blank">
         Collaborate
       </a>
     </div>
   </div>
 
- <div class="ui vertical segments">
-   <div class="ui segment">
-  <h2 class="ui icon header">
-   <img class="ui centered medium image" src ="//upload.wikimedia.org/wikipedia/mediawiki/thumb/7/78/WMF_Analytics_-_Ring_Logo_(thick).svg/300px-WMF_Analytics_-_Ring_Logo_(thick).svg.png">
-   <div class="content">
-    Dashboards and Data Downloads for Wikimedia Projects
-    <div class="sub header">Data compiled by community and staff, from projects hosted by the Wikimedia Foundation.</div>
-  </div>
-</h2>
-</div>
- <div class="ui segment">
-
-
-<h5>Code for this page can be seen here:<a href="https://github.com/wikimedia/analytics-analytics.wikimedia.org">
+  <div class="ui vertical segments">
+    <div class="ui segment">
+      <h2 class="ui icon header">
+        <img class="ui centered medium image" src ="//upload.wikimedia.org/wikipedia/mediawiki/thumb/7/78/WMF_Analytics_-_Ring_Logo_(thick).svg/300px-WMF_Analytics_-_Ring_Logo_(thick).svg.png">
+        <div class="content">
+        Dashboards and Data Downloads for Wikimedia Projects
+        <div class="sub header">Data compiled by community and staff, from projects hosted by the Wikimedia Foundation.</div>
+        </div>
+      </h2>
+    </div>
+    <div class="ui segment">
+      <h5>Code for this page can be seen here:<a href="https://github.com/wikimedia/analytics-analytics.wikimedia.org">
   <i class="icon github"></i></a></h5>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
 
 </body>
 </html>

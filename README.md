@@ -17,3 +17,6 @@ gulp --layout metrics-by-project --config VitalSigns --piwik piwik.wikimedia.org
 
 ### Browser Reports ###
 gulp --layout tabs --config SimpleRequestBreakdowns  --piwik piwik.wikimedia.org,8
+
+### Standard Metrics ###
+gulp --layout tabs --config StandardMetrics  --piwik piwik.wikimedia.org,8

@@ -1,8 +1,8 @@
 <!doctype html>
 <!-- Conventions for Layout index.html:
     * URLs must be relative to the root, as in, they should start with /src
-    * CSS that you want concatenated and minified should be in a head section with class="minify"
-    * build:title, build:css, and build:js will be replaced by the build system with build artifacts
+    * all CSS in <head> will be concatenated and minified in the order included
+    * build:... sections will be replaced by the build system
 -->
 <html lang="en">
     <head>
@@ -11,12 +11,14 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <title>Standard Metrics</title>
 
+        <!-- Piwik --><script type="text/javascript">var _paq = _paq || [];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function() {var u="//piwik.wikimedia.org/";_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setSiteId", 8]);var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);})();</script><noscript><p><img src="//piwik.wikimedia.org/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript><!-- End Piwik Code -->
 
-        <section class="minify">
-        <link rel="stylesheet" href="styles.css?v=494a21e">
-        </section>
+        <link rel="stylesheet" href="styles.css?v=7eb08d7">
+    </head>
+    <body>
+        <tabs-layout class="flexer"/>
 
-        <script src="scripts.js?v=494a21e"></script><!-- Piwik --><script type="text/javascript">var _paq = _paq || [];_paq.push(["trackPageView"]);_paq.push(["enableLinkTracking"]);(function() {var u="//piwik.wikimedia.org/";_paq.push(["setTrackerUrl", u+"piwik.php"]);_paq.push(["setSiteId", 8]);var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);})();</script><noscript><p><img src="//piwik.wikimedia.org/piwik.php?idsite=8" style="border:0;" alt="" /></p></noscript><!-- End Piwik Code -->
+        <script src="scripts.js?v=7eb08d7"></script>
     </head>
     <body>
         <tabs-layout class="flexer"/>

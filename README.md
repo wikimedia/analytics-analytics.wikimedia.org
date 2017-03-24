@@ -13,10 +13,10 @@ In order to update you need to build dashiki locally and update the source.
 The only thing to look for is that piwik site is #8 and that has to be passed
 at build time
 ### Vital Signs ###
-gulp --layout metrics-by-project --config VitalSigns --piwik piwik.wikimedia.org,8
+gulp --layout metrics-by-project --config Config:VitalSigns --piwik piwik.wikimedia.org,8
 
 ### Browser Reports ###
-gulp --layout tabs --config SimpleRequestBreakdowns  --piwik piwik.wikimedia.org,8
+gulp --layout tabs --config Config:SimpleRequestBreakdowns  --piwik piwik.wikimedia.org,8
 
 ### Standard Metrics ###
-gulp --layout tabs --config StandardMetrics  --piwik piwik.wikimedia.org,8
+gulp --layout tabs --config Config:StandardMetrics  --piwik piwik.wikimedia.org,8

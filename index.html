@@ -1,87 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Dashboards and Data Downloads for Wikimedia Projects</title>
-  <link rel="icon" type="image/x-icon" href="./static/wikimedia_favicon.ico">
-  <link rel="stylesheet" href="static/semantic.min.css">
-  <script defer src="static/jquery.min.js"></script>
-  <script defer src="static/semantic.min.js"></script>
-<!-- Piwik, note piwik ID for this site is "8"-->
-<script>
-  var _paq = _paq || [];
-  _paq.push(["setDomains", ["*.analytics.wikimedia.org"]]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.wikimedia.org/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 8]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//piwik.wikimedia.org/piwik.php?idsite=8" style="border:0;" alt=""/></p></noscript>
-<!-- End Piwik Code -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Dashboards and Data Downloads for Wikimedia Projects</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./static/wikimedia_favicon.ico"
+    />
+    <link rel="stylesheet" href="static/semantic.min.css" />
+    <script defer src="static/jquery.min.js"></script>
+    <script defer src="static/semantic.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/static/fonts/Lato-Regular.woff2");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: italic;
+        font-weight: 400;
+        src: url("/static/fonts/Lato-Italic.woff2");
+      }
+      @font-face {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 700;
+        src: url("/static/fonts/Lato-Bold.woff2");
+      }
+    </style>
+    <!-- Piwik, note piwik ID for this site is "8"-->
+    <script>
+      var _paq = _paq || [];
+      _paq.push(["setDomains", ["*.analytics.wikimedia.org"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "//piwik.wikimedia.org/";
+        _paq.push(["setTrackerUrl", u + "piwik.php"]);
+        _paq.push(["setSiteId", 8]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "piwik.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+    <noscript
+      ><p>
+        <img
+          src="//piwik.wikimedia.org/piwik.php?idsite=8"
+          style="border: 0"
+          alt=""
+        /></p
+    ></noscript>
+    <!-- End Piwik Code -->
+  </head>
+  <body>
+    <div class="ui main text container">
+      <div class="ui top attached menu">
+        <div class="ui icon item">
+          <a href="//wikimediafoundation.org">
+            <img
+              alt="Wikimedia-logo black.svg"
+              src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/64px-Wikimedia-logo_black.svg.png"
+              width="64"
+              height="64"
+              srcset="
+                //upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/96px-Wikimedia-logo_black.svg.png  1.5x,
+                //upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/128px-Wikimedia-logo_black.svg.png 2x
+              "
+              data-file-width="1024"
+              data-file-height="1024"
+            />
+          </a>
+        </div>
 
-</head>
-<body>
-<div class="ui main text container">
-
-  <div class="ui top attached menu ">
-
-    <div class ="ui icon item">
-      <a  href="//wikimediafoundation.org">
-        <img alt="Wikimedia-logo black.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/64px-Wikimedia-logo_black.svg.png" width="64" height="64" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/96px-Wikimedia-logo_black.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wikimedia-logo_black.svg/128px-Wikimedia-logo_black.svg.png 2x" data-file-width="1024" data-file-height="1024">
-    </a>
-  </div>
-
-  <div class="right mini menu">
-      <div class="ui simple dropdown item ">
-        <i class="dashboard icon"></i>Dashboards<i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item"><a href="dashboards/browsers/">Browser Statistics</a></div>
-          <div class="item"><a href="dashboards/vital-signs/">Readers: Pageviews and Unique Devices </a></div>
-          <div class="item"><a href="//stats.wikimedia.org/v2/">Wikistats 2</a></div>
-      </div>
-      </div>
-      <div class="ui simple dropdown item">
-        <i class="cloud download icon"></i>Downloads<i class="dropdown icon"></i>
-        <div class="menu">
-          <div class="item"><a href="//datasets.wikimedia.org">datasets.wikimedia.org</a></div>
-          <div class="item"><a href="//dumps.wikimedia.org">dumps.wikimedia.org</a></div>
+        <div class="right mini menu">
+          <div class="ui simple dropdown item">
+            <i class="dashboard icon"></i>Dashboards<i
+              class="dropdown icon"
+            ></i>
+            <div class="menu">
+              <div class="item">
+                <a href="dashboards/browsers/">Browser Statistics</a>
+              </div>
+              <div class="item">
+                <a href="dashboards/vital-signs/"
+                  >Readers: Pageviews and Unique Devices
+                </a>
+              </div>
+              <div class="item">
+                <a href="//stats.wikimedia.org/v2/">Wikistats 2</a>
+              </div>
+            </div>
+          </div>
+          <div class="ui simple dropdown item">
+            <i class="cloud download icon"></i>Downloads<i
+              class="dropdown icon"
+            ></i>
+            <div class="menu">
+              <div class="item">
+                <a href="//datasets.wikimedia.org">datasets.wikimedia.org</a>
+              </div>
+              <div class="item">
+                <a href="//dumps.wikimedia.org">dumps.wikimedia.org</a>
+              </div>
+            </div>
+          </div>
+          <a
+            class="item"
+            href="https://wikitech.wikimedia.org/wiki/Analytics#Contact"
+            target="_blank"
+          >
+            Contact Us
+          </a>
         </div>
       </div>
-      <a class="item" href="https://wikitech.wikimedia.org/wiki/Analytics#Contact" target="_blank">
-        Contact Us
-      </a>
-  </div>
-</div>
 
+      <div class="ui vertical segments">
+        <div class="ui segment">
+          <h2 class="ui icon header">
+            <img
+              class="ui centered medium image"
+              src="//upload.wikimedia.org/wikipedia/mediawiki/thumb/7/78/WMF_Analytics_-_Ring_Logo_(thick).svg/300px-WMF_Analytics_-_Ring_Logo_(thick).svg.png"
+            />
+            <div class="content">
+              Dashboards and Data Downloads for Wikimedia Projects
 
-  <div class="ui vertical segments">
-    <div class="ui segment">
-      <h2 class="ui icon header">
-        <img class="ui centered medium image" src ="//upload.wikimedia.org/wikipedia/mediawiki/thumb/7/78/WMF_Analytics_-_Ring_Logo_(thick).svg/300px-WMF_Analytics_-_Ring_Logo_(thick).svg.png">
-        <div class="content">
-        Dashboards and Data Downloads for Wikimedia Projects
+              <div class="sub header">
+                Data compiled by community and staff, from projects hosted by
+                the Wikimedia Foundation. All data, charts, and other content is
+                available under the
+                <a href="//creativecommons.org/publicdomain/zero/1.0/"
+                  >Creative Commons CC0 Dedication</a
+                >.
+              </div>
 
-        <div class="sub header">Data compiled by community and staff, from projects hosted by the Wikimedia Foundation.
-        All data, charts, and other content is available under the <a href="//creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 Dedication</a>.</div>
-
-        <div class="sub header"><a href="//foundation.wikimedia.org/wiki/Non-wiki_privacy_policy">Privacy Policy</a>.</div>
+              <div class="sub header">
+                <a
+                  href="//foundation.wikimedia.org/wiki/Non-wiki_privacy_policy"
+                  >Privacy Policy</a
+                >.
+              </div>
+            </div>
+          </h2>
         </div>
-      </h2>
+      </div>
+      <div class="ui">
+        <h5>
+          Code for this page can be seen here:<a
+            href="//github.com/wikimedia/analytics-analytics.wikimedia.org"
+          >
+            <i class="icon github"></i
+          ></a>
+        </h5>
+      </div>
     </div>
-
-  </div>
-  <div class="ui ">
-      <h5>Code for this page can be seen here:<a href="//github.com/wikimedia/analytics-analytics.wikimedia.org">
-      <i class="icon github"></i></a>
-    </h5>
-    </div>
-</div>
-
-</body>
+  </body>
 </html>
